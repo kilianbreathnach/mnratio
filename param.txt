@@ -1,0 +1,31 @@
+# input-output files and parameters
+data_filename= tempmock.dat
+random_filename= mocks/qpm/randoms/a0.7143_rand20x.dr12d_lowz_ngc.rdz
+input_format= 2
+mask_filename= none
+z_dist_filename= none
+output_filename= data/LOWZ/NGC/Planck/mocks/wps/0100.xi_sp
+num_lines= all
+
+# estimation parameters
+corr_type= 3D_ps
+corr_estimator= LS
+np_rand_fact= 1
+
+# cosmological parameters
+omega_M= 0.307115
+omega_L= 0.692885
+w= -1
+
+# binning
+log_bin= 1
+n_logint= 12
+dim1_max= 80
+dim1_nbin= 36
+dim2_max= 80
+dim2_nbin= 80
+dim3_min= 0.08
+dim3_max= 0.45
+dim3_nbin= 1
+
+

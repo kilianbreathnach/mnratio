@@ -1,3 +1,10 @@
 .*.sw*
 *~
 *.so
+*.pyc
+*.dat
+*.png
+*.pdf
+*.hdf5
+*.h5
+*.txt
