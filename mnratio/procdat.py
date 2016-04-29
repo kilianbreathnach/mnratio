@@ -59,7 +59,8 @@ def down_to_red():
     """
     redat = fits.open("../redmapper/redmapper_dr8_public_v5.10_catalog.fits")[1].data
     redzs = redat["Z_LAMBDA"]
-    posids = np.where((redzs > 0) * (redzs < 0.45))[0]
+    posids = np.where((redzs > 0) * (redzs < 0.35))[0]  # 0.35 volume limited
+                                                        # (was 0.45)
     redat = redat[posids]
     redzs = redat["Z_LAMBDA"]
 
@@ -71,9 +72,9 @@ def down_to_red():
 
     fitsl = ["../bossdat/lowz-dr12v4-N-Reid.dat.fits",
              "../bossdat/lowz-dr12v4-S-Reid.dat.fits"]
-    outfns = ["../data/LOWZ/NGC/rdz.hdf5",
-              "../data/LOWZ/SGC/rdz.hdf5"]
-    figs = ["NGC_nowbars.pdf", "SGC_nowbars.pdf"]
+    outfns = ["../data/LOWZ/NGC/rdz_z.35.hdf5",
+              "../data/LOWZ/SGC/rdz_z.35.hdf5"]
+    figs = ["NGC_nbars_z.35.pdf", "SGC_nbars_z.35.pdf"]
 
     for i, cap in enumerate([ngc_zs, sgc_zs]):
 
